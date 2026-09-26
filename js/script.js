@@ -1,6 +1,3 @@
-/* ==========================================================================
-   DroneTV — Shared interactions
-   ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
@@ -9,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initDashboard();
 });
 
-/* ---- Mobile navigation ---- */
+/* Mobile navigation*/
 function initMobileMenu() {
   const toggle = document.querySelector(".nav-toggle");
   const menu = document.querySelector(".mobile-menu");
@@ -29,7 +26,7 @@ function initMobileMenu() {
   });
 }
 
-/* ---- Courses page: category filtering ---- */
+/* Courses page: category filtering */
 function initCourseFilter() {
   const chips = document.querySelectorAll(".filter-chip");
   const cards = document.querySelectorAll("[data-category]");
@@ -49,7 +46,7 @@ function initCourseFilter() {
   });
 }
 
-/* ---- Login page: client-side validation ---- */
+/* Login page: client-side validation*/
 function initLoginForm() {
   const form = document.getElementById("login-form");
   if (!form) return;
@@ -104,7 +101,7 @@ function initLoginForm() {
   }
 }
 
-/* ---- Dashboard: sidebar sections, continue course, saved items, logout ---- */
+/* Dashboard: sidebar sections, continue course, saved items, logout*/
 function initDashboard() {
   const dash = document.querySelector(".dash-shell");
   if (!dash) return;
@@ -127,7 +124,7 @@ function initDashboard() {
     });
   }
 
-  // Continue course button — nudges progress forward for demo purposes
+
   const continueBtn = document.querySelector("[data-continue]");
   const progressFill = document.querySelector(".progress-fill");
   const progressLabel = document.querySelector(".progress-label");
