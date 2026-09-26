@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — DroneTV</title>
+<meta name="description" content="Your DroneTV learning dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dash-shell">
+  <aside class="dash-sidebar">
+    <a href="index.html" class="brand">DroneTV<span class="dot">.</span></a>
+    <nav class="dash-nav" aria-label="Dashboard">
+      <a href="#" data-section="dashboard" aria-current="page">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+        Dashboard
+      </a>
+      <a href="#" data-section="courses">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5"/></svg>
+        Courses
+      </a>
+      <a href="services.html">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 9h8M8 13h5"/></svg>
+        Services
+      </a>
+      <a href="#" data-section="saved">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-4-7 4V5a2 2 0 012-2h10a2 2 0 012 2v16z"/></svg>
+        Saved
+      </a>
+      <a href="#" data-section="profile">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        Profile
+      </a>
+    </nav>
+    <button class="btn btn--ghost btn--sm dash-logout" data-logout style="margin-top: auto;">Log out</button>
+  </aside>
+
+  <main class="dash-main">
+    <!-- Dashboard panel -->
+    <section data-panel="dashboard">
+      <div class="dash-topbar">
+        <div>
+          <h1>Welcome back, Avwerosuo</h1>
+          <p>Here's where you left off in the ecosystem.</p>
+        </div>
+      </div>
+
+      <div class="dash-stats">
+        <div class="dash-stat">
+          <div class="num">4</div>
+          <div class="label">Courses in progress</div>
+        </div>
+        <div class="dash-stat">
+          <div class="num">68%</div>
+          <div class="label">Average progress</div>
+        </div>
+        <div class="dash-stat">
+          <div class="num">12</div>
+          <div class="label">Saved items</div>
+        </div>
+      </div>
+
+      <h2 style="font-size: var(--step-2); margin-bottom: 1.1rem;">Continue learning</h2>
+      <div class="continue-card">
+        <p class="course-title">AI for drone technology</p>
+        <p class="course-sub">Module 6 of 10 — Computer vision for autonomous flight</p>
+        <div class="progress-track"><div class="progress-fill" style="width: 68%;"></div></div>
+        <p class="progress-label">68% complete</p>
+        <button class="btn btn--primary" data-continue>Continue course</button>
+      </div>
+    </section>
+
+    <!-- Courses panel -->
+    <section data-panel="courses" hidden>
+      <div class="dash-topbar">
+        <div>
+          <h1>Your courses</h1>
+          <p>Everything you're currently learning.</p>
+        </div>
+      </div>
+      <div class="grid grid--2">
+        <article class="card course-card">
+          <div class="course-meta"><span class="tag tag--level">Intermediate</span><span class="tag">68% done</span></div>
+          <h3>AI for drone technology</h3>
+          <p>Computer vision and autonomous flight systems.</p>
+        </article>
+        <article class="card course-card">
+          <div class="course-meta"><span class="tag tag--level">Beginner</span><span class="tag">40% done</span></div>
+          <h3>Drone technology fundamentals</h3>
+          <p>Core components and flight principles.</p>
+        </article>
+        <article class="card course-card">
+          <div class="course-meta"><span class="tag tag--level">Intermediate</span><span class="tag">15% done</span></div>
+          <h3>GIS &amp; aerial mapping</h3>
+          <p>Surveying and geospatial analysis.</p>
+        </article>
+        <article class="card course-card">
+          <div class="course-meta"><span class="tag tag--level">Intermediate</span><span class="tag">Not started</span></div>
+          <h3>Aerial cinematography</h3>
+          <p>Professional aerial photography techniques.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Saved panel -->
+    <section data-panel="saved" hidden>
+      <div class="dash-topbar">
+        <div>
+          <h1>Saved content</h1>
+          <p>Videos, interviews and courses you've bookmarked.</p>
+        </div>
+      </div>
+      <div class="saved-list">
+        <div class="saved-item">
+          <span>Inside an autonomous mapping flight</span>
+          <button data-remove-saved aria-label="Remove from saved">Remove</button>
+        </div>
+        <div class="saved-item">
+          <span>How AI is reshaping drone inspection</span>
+          <button data-remove-saved aria-label="Remove from saved">Remove</button>
+        </div>
+        <div class="saved-item">
+          <span>GIS &amp; Aerial Mapping course</span>
+          <button data-remove-saved aria-label="Remove from saved">Remove</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile panel -->
+    <section data-panel="profile" hidden>
+      <div class="dash-topbar">
+        <div>
+          <h1>Profile</h1>
+          <p>Your DroneTV account details.</p>
+        </div>
+      </div>
+      <div class="card" style="max-width: 480px;">
+        <div class="field">
+          <label>Name</label>
+          <input type="text" value="Avwerosuo Okeme" disabled>
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" value="avwerosuo@example.com" disabled>
+        </div>
+        <div class="field" style="margin-bottom: 0;">
+          <label>Role</label>
+          <input type="text" value="Learner" disabled>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
