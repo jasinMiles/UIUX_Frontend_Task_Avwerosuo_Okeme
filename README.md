@@ -27,7 +27,7 @@ Clone the repository and open `index.html` in a browser — no build step or dep
 
 [Figma Design]
 
-(https://www.figma.com/make/mAXA2leo2bzKQOkZNso1Ym/ipage?t=eeFSe2KoKH1xDi4h-1)
+(https://spout-film-53105140.figma.site/)
 
 Live demo
 
